@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import config from '../../config';
 
 // Transporter
 const transporter = nodemailer.createTransport({
@@ -12,7 +13,7 @@ export const sendMail = async (to, subject, body) => {
 
     // Configuration
     const mailOptions = {
-        from: 'support@althera-verse.com',
+        from: config.support_email,
         to: to,
         subject: subject,
         html: body
