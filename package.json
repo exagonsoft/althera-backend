@@ -1,0 +1,35 @@
+{
+  "name": "althera-backend",
+  "version": "1.0.0",
+  "description": "The backend server for the AltherA Metaverse",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=@babel/preset-env",
+    "dev": "nodemon --exec npm run babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exagonsoft/althera-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exagonsoft/althera-backend/issues"
+  },
+  "homepage": "https://github.com/exagonsoft/althera-backend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1",
+    "promise-mysql": "^5.2.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.21"
+  }
+}
