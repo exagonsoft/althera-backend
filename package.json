@@ -6,7 +6,10 @@
   "scripts": {
     "babel-node": "babel-node --presets=@babel/preset-env",
     "dev": "nodemon --exec npm run babel-node src/index.js",
-    "preinstall": "npm config set strict-ssl false"
+    "preinstall": "npm config set strict-ssl false",
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
