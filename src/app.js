@@ -13,7 +13,7 @@ app.use(morgan("dev"))
 app.use(express.json())
 
 //Routes
-app.use("/api",_subscrivers_route);
+app.use("/",_subscrivers_route);
 
 
 export default app
