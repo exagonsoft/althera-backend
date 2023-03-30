@@ -1,4 +1,3 @@
-import { GetConnection } from "../database/DataBase";
 import {
   DeleteSubscriverHandler,
   GetSubscriverDetailsHandler,
