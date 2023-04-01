@@ -2,7 +2,7 @@
   "name": "althera-backend",
   "version": "1.0.0",
   "description": "The backend server for the AltherA Metaverse",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "babel-node": "babel-node --presets=@babel/preset-env",
     "dev": "nodemon --exec npm run babel-node src/index.js",
