@@ -4,5 +4,7 @@ module.exports = {
     database: process.env.DATABASE || "",
     admin: process.env.ADMIN || "",
     password: process.env.PASSWORD || "",
-    support_email: process.env.SUPPORT_EMAIL || ""
+    support_email: process.env.SUPPORT_EMAIL || "",
+    local_test_application: process.env.LOCAL_TEST_CLIENT || "",
+    remote_client_app: process.env.REMOTE_CLIENT_APP || ""
 }
