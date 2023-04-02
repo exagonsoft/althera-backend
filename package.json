@@ -4,10 +4,18 @@
   "description": "The backend server for the AltherA Metaverse",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "nodemon":"nodemon index.js",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "reactjs",
+    "exagon-soft",
+    "althera-verse"
+  ],
+  "author": "EXAGON-SOFT",
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.4",
@@ -15,6 +23,10 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.1",
+    "node-mailer": "^0.1.1",
     "promise-mysql": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
