@@ -5,19 +5,21 @@ const http = require("http");
 const cors = require("cors");
 const helmet = require("helmet");
 const compression = require("compression");
+const _routes = require("./routes/api.users.routes");
+const config = require("./config/config");
 
-const port = 4004;
+const {server_port, allowedDomins} = config
+
+const port = server_port;
 const app = express();
 
 app.use(express.json())
-app.use(cors({origuin: []}))
+app.use(cors({origuin: allowedDomins}))
 app.use(helmet());
 app.use(compression())
-app.get('/', (req, res) => {
-    return res.send("Wellcome to AltherA Metaverse")
-})
+app.use(_routes)
 const server = http.createServer(app);
 
-server.listen(port, () => {
+server.listen(() => {
     console.log(`Server Up and Running on port: ${port}`)
 })
