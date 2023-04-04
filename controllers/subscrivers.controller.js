@@ -1,11 +1,11 @@
-import {
+const {
   DeleteSubscriverHandler,
   GetSubscriverDetailsHandler,
   GetSubscriversHandler,
   SaveSubscriverHandler,
-} from "../handlers/subscrivers_handler";
-import { sendMail } from "../mail/Sender";
-import { SubscriverTemplate } from "../mail/templates";
+} = require("../handlers/subscrivers.handlers");
+const { sendMail } = require("../mail/mail.sender");
+const SubscriverTemplate = require("../mail/subscrive.wellcome.template");
 
 const GetSubscrivers = async (req, res) => {
   try {
@@ -40,9 +40,13 @@ const AddSubscriver = async (req, res) => {
     try {
       //Sending Wellcome email
       let _template = SubscriverTemplate;
-      await sendMail(email, _template.subject, _template.body);
+      await sendMail(
+        email,
+        SubscriverTemplate.subject,
+        SubscriverTemplate.body
+      );
     } catch (error) {
-        console.log(error);
+      console.log(error);
       res.status(500);
       res.send(error.message);
     }
@@ -64,7 +68,7 @@ const DeleteSubscriver = async (req, res) => {
   }
 };
 
-export const Methods = {
+module.exports = {
   GetSubscrivers,
   GetSubscriverDetails,
   AddSubscriver,
